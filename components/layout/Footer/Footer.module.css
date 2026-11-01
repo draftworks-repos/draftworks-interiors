@@ -1,0 +1,192 @@
+.footer {
+  background-color: var(--color-espresso);
+  color: var(--bg-warm-ivory);
+  padding-top: clamp(64px, 8vw, 100px);
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  padding-bottom: clamp(48px, 6vw, 80px);
+  border-bottom: 1px solid rgba(216, 202, 187, 0.15);
+}
+
+@media (min-width: 768px) {
+  .topGrid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 36px;
+  }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandTitle {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--bg-warm-ivory);
+  letter-spacing: -0.01em;
+}
+
+.brandDesc {
+  font-size: 0.9rem;
+  color: #B5A897;
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #D8CABB;
+  margin-top: 12px;
+}
+
+.colHeading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #A99A87;
+  margin-bottom: 18px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkItem a {
+  font-size: 0.88rem;
+  color: #D8CABB;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.linkItem a:hover {
+  color: #FFFFFF;
+  transform: translateX(2px);
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputWrapper {
+  display: flex;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(216, 202, 187, 0.25);
+  border-radius: 9999px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: #D8CABB;
+}
+
+.emailInput {
+  background: transparent;
+  border: none;
+  padding: 12px 18px;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  width: 100%;
+  outline: none;
+}
+
+.emailInput::placeholder {
+  color: #8C8071;
+}
+
+.submitBtn {
+  background-color: var(--bg-warm-ivory);
+  border: none;
+  color: var(--color-espresso);
+  padding: 0 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #FFFFFF;
+}
+
+.giantWordmarkWrap {
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: clamp(32px, 5vw, 60px);
+  border-bottom: 1px solid rgba(216, 202, 187, 0.12);
+  text-align: center;
+}
+
+.giantWordmark {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 11vw, 9.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #EDE5D8;
+  user-select: none;
+  font-weight: 300;
+  display: block;
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 28px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #8C8071;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+  }
+}
+
+.socialRow {
+  display: flex;
+  gap: 20px;
+}
+
+.socialRow a {
+  color: #B5A897;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.socialRow a:hover {
+  color: #FFFFFF;
+}

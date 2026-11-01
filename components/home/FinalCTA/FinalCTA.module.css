@@ -1,0 +1,113 @@
+.section {
+  background-color: var(--color-espresso);
+  color: var(--bg-warm-ivory);
+  padding: clamp(80px, 9vw, 130px) 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(216, 202, 187, 0.15);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (min-width: 900px) {
+  .ctaRow {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #F6F1E9;
+  max-width: 650px;
+}
+
+.heading em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  color: #D8CABB;
+}
+
+.actionCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .actionCol {
+    align-items: flex-end;
+  }
+}
+
+.socialProof {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-espresso);
+  margin-left: -8px;
+  background-color: #38332C;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.proofText {
+  font-size: 0.82rem;
+  color: #B5A897;
+  font-weight: 500;
+}
+
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-warm-ivory);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.startBtn:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-2px);
+}

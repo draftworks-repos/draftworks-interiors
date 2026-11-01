@@ -1,0 +1,6 @@
+{
+  "name": "DraftWorks Interiors",
+  "description": "Premium residential and commercial interior design studio in Bhopal, crafting atmospheres and shaping experiences with timeless materials and thoughtful architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,61 @@
+export const siteConfig = {
+  name: 'DraftWorks Interiors',
+  legalName: 'DraftWorks Interiors Studio LLP',
+  tagline: 'Crafting Atmospheres. Shaping Experiences.',
+  description:
+    'DraftWorks Interiors is an architectural interior design studio in Bhopal, Madhya Pradesh, crafting refined residential and commercial spaces defined by timeless materials, natural light, and quiet elegance.',
+  url: 'https://draftworks.in',
+  email: 'hello@draftworks.in',
+  phone: '+91 89596 90529',
+  formattedPhone: '+91 89596 90529',
+  location: {
+    street: 'E-3, Arera Colony',
+    city: 'Bhopal',
+    state: 'Madhya Pradesh',
+    country: 'India',
+    postalCode: '462016',
+    fullAddress: 'E-3 Arera Colony, Bhopal, Madhya Pradesh 462016, India',
+  },
+  operatingHours: 'Monday – Saturday: 10:00 AM – 7:30 PM IST',
+  currency: 'INR',
+  currencySymbol: '₹',
+  navLinks: [
+    { label: 'About', href: '/about' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Services', href: '/services' },
+    { label: 'Journal', href: '/journal' },
+    { label: 'Pricing', href: '/pricing' },
+  ],
+  footerLinks: {
+    services: [
+      { label: 'Residential Interiors', href: '/services/residential-interior-design' },
+      { label: 'Commercial Architecture', href: '/services/commercial-interior-design' },
+      { label: 'Space Planning', href: '/services/space-planning' },
+      { label: 'Furniture & Styling', href: '/services/furniture-and-styling' },
+      { label: 'Lighting Design', href: '/services/lighting-design' },
+      { label: 'Renovation & Remodel', href: '/services/renovation-remodeling' },
+    ],
+    studio: [
+      { label: 'About Our Studio', href: '/about' },
+      { label: 'Selected Projects', href: '/projects' },
+      { label: 'Indicative Pricing', href: '/pricing' },
+      { label: 'Design FAQs', href: '/faq' },
+      { label: 'Client Inquiry', href: '/contact' },
+    ],
+    legal: [
+      { label: 'Privacy Policy', href: '/privacy-policy' },
+      { label: 'Terms & Conditions', href: '/terms' },
+    ],
+  },
+  social: [
+    { name: 'Instagram', href: 'https://instagram.com/draftworksinteriors', handle: '@draftworksinteriors' },
+    { name: 'Pinterest', href: 'https://pinterest.com/draftworksinteriors', handle: 'DraftWorks Interiors' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/draftworks-interiors', handle: 'DraftWorks Interiors' },
+  ],
+  stats: [
+    { value: '150+', label: 'Projects Completed', detail: 'Across residential & boutique commercial' },
+    { value: '12+', label: 'Years Experience', detail: 'Practicing architectural craftsmanship' },
+    { value: '98%', label: 'Client Satisfaction', detail: 'Based on post-handover evaluations' },
+    { value: '18', label: 'Cities Served', detail: 'Across Central & Western India' },
+  ],
+};

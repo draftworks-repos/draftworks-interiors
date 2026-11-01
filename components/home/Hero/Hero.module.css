@@ -1,0 +1,209 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - 20px);
+  padding-top: clamp(120px, 12vw, 150px);
+  padding-bottom: 0;
+  background-color: var(--bg-warm-ivory);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Centered text within max-width container */
+.textContainer {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 clamp(20px, 5vw, 40px);
+}
+
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-warm-brown);
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6.2vw, 5.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--color-deep-charcoal);
+  margin-bottom: 20px;
+}
+
+.headline em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-warm-brown);
+}
+
+.subheading {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.6;
+  color: #5C5245;
+  max-width: 620px;
+  margin: 0 auto 32px;
+  text-wrap: balance;
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: clamp(36px, 5vw, 56px);
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-espresso);
+  color: var(--bg-warm-ivory);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryCta:hover {
+  background-color: var(--color-deep-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(23, 22, 19, 0.15);
+}
+
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-deep-charcoal);
+  border: 1px solid var(--color-sand);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.secondaryCta:hover {
+  background-color: var(--bg-soft-cream);
+  border-color: var(--color-taupe);
+}
+
+/* Full-Screen-Width Carousel: Breaks outside website max-width container, sits flush at bottom */
+.carouselWrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 16px 0 0 0;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Smooth continuous right-to-left glide */
+.carouselTrack {
+  display: flex;
+  gap: clamp(16px, 2vw, 24px);
+  width: max-content;
+  animation: glideRightToLeft 44s linear infinite;
+  will-change: transform;
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes glideRightToLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Individual architectural card */
+.carouselCard {
+  position: relative;
+  width: clamp(290px, 26vw, 390px);
+  height: clamp(210px, 21vw, 290px);
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--color-sand);
+  background-color: var(--bg-soft-cream);
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(23, 22, 19, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+
+.carouselCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-taupe);
+  box-shadow: 0 12px 32px rgba(23, 22, 19, 0.12);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carouselCard:hover .cardImage {
+  transform: scale(1.04);
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px 16px;
+  background: linear-gradient(to top, rgba(23, 22, 19, 0.85) 0%, rgba(23, 22, 19, 0.45) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: transform 0.3s ease;
+}
+
+.cardRoom {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #D8CABB;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}

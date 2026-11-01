@@ -1,0 +1,89 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--bg-warm-ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1),
+              opacity 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform, opacity;
+  pointer-events: all;
+}
+
+.exiting {
+  transform: translateY(-100%);
+  opacity: 0.98;
+  pointer-events: none;
+}
+
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+  padding: 24px;
+}
+
+.brandSubtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-warm-brown);
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+.percentNumber {
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 16vw, 11rem);
+  line-height: 0.95;
+  color: var(--color-espresso);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 24px;
+}
+
+.percentSymbol {
+  font-size: 0.45em;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-warm-brown);
+  margin-left: 6px;
+}
+
+.progressTrack {
+  width: clamp(160px, 25vw, 240px);
+  height: 2px;
+  background-color: var(--color-sand);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-espresso);
+  border-radius: 9999px;
+  transition: width 0.08s linear;
+}
+
+.statusText {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-warm-brown);
+  min-height: 1.2em;
+}

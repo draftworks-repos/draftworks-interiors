@@ -1,0 +1,115 @@
+.section {
+  background-color: var(--bg-warm-ivory);
+  padding: clamp(90px, 10vw, 150px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1.6fr 1fr;
+    gap: 32px;
+  }
+}
+
+.leftPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.rightPhotos {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.photoCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--bg-soft-cream);
+  box-shadow: 0 10px 30px rgba(23, 22, 19, 0.04);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photoCard:hover {
+  transform: translateY(-4px);
+}
+
+.centerContent {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-warm-brown);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  color: var(--color-deep-charcoal);
+  margin-bottom: 24px;
+}
+
+.heading em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-warm-brown);
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.7;
+  color: #5C5245;
+  margin-bottom: 32px;
+}
+
+.moreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-espresso);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-espresso);
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+}
+
+.moreLink:hover {
+  color: var(--color-warm-brown);
+  border-color: var(--color-warm-brown);
+  gap: 12px;
+}

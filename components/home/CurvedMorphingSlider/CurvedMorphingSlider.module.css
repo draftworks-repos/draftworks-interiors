@@ -1,0 +1,93 @@
+.galleryWrapper {
+  position: relative;
+  width: 100%;
+  /* No max-width: spans full viewport width without artificial bounds */
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+  padding: 10px 0 24px;
+}
+
+.galleryStage {
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 34vw, 470px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+}
+
+.slideItem {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  will-change: transform, clip-path;
+  transition: filter 0.3s ease;
+  overflow: hidden;
+  background-color: var(--color-sand);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.slideItem:hover {
+  filter: brightness(1.02);
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Subtle architectural backdrop wireframe sketch for Hero */
+.architecturalWireframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.32;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heroContentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Interactive subtle drag hint */
+.dragHint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-warm-brown);
+  opacity: 0.8;
+  pointer-events: none;
+}
